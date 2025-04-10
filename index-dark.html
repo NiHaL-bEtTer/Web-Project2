@@ -12,7 +12,7 @@ Date last Modified: 3/18/2025
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TreatyTrove</title>
-    <link rel="stylesheet" href="style.css"> <!--yo this link the stylesheet-->
+    <link rel="stylesheet" href="style-dark.css"> <!--yo this link the stylesheet-->
     <link rel="icon" href="images/treaty-icon.jpg" type="image/jpg">
     <style>
         .section { /*this is the css for the sections*/
@@ -24,7 +24,7 @@ Date last Modified: 3/18/2025
         }
         .footer2 { /*this the css for the decoration footer*/
         height: 3px;
-        background-color: #A31D1D;
+        background-color: #6D2323;
         } 
         span { /*this is da css for the span*/
         font-weight: bold;
@@ -38,6 +38,18 @@ Date last Modified: 3/18/2025
 
     </style>
 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const checkbox = document.getElementById('mode-toggle');
+
+      checkbox.addEventListener('change', function() {
+        if (checkbox.checked) {
+          window.location.href = 'index.html'; // Redirects to local HTML file
+        }
+      });
+    });
+  </script>
 </head>
 <body>
     <header> <!--this is the first part of the website, it containts the header and nav bar-->
@@ -50,7 +62,8 @@ Date last Modified: 3/18/2025
                 <li><a href="#section3" class="section-link">Reason</a></li>
                 <li><a href="#section4" class="section-link">Indigenous Communities</a></li>
                 <li><a href="#section4" class="section-link">A cool video</a></li>
-                <li><a href="index-dark.html" class="section-link">Dark Mode</a></li>
+                <li><a href="index.html" class="section-link">Light Mode</a></li>
+                
                 
             </ul>
         </nav>
@@ -202,5 +215,13 @@ Date last Modified: 3/18/2025
     <footer> <!--this is the actial footer-->
         <p>&copy; 2025 Nihal is better. All rights reserved.</p>
     </footer>
+
+
+
+
+    <div class="container">
+        <input type="checkbox" id="mode-toggle">
+        <label for="mode-toggle" class="mode-toggle"></label>
+    </div>
 </body>
 </html>

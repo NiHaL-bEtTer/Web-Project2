@@ -4,9 +4,9 @@ html {
 } /*this is an interesting one, adds more padding when u scroll down, this is here because the nav bars take up alot of space and when u scroll down with the section links, it covers part of the section*/
 
 body { /* default styles of the body*/
-    color: #6D2323;
+    color: #E5D0AC;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #FEF9E1;
+    background-color: #1D1616;
     margin: 0;
     padding-top: 80px; 
     line-height: 1.6;
@@ -23,9 +23,9 @@ header { /*styles for the header,*/
 .nav-bar { /*this is the css for the nav bar*/
     display: flex; /*sets the display setting to flex (flexbox)*/
     align-items: center; /*aligns the items to the center  (duhh)*/
-    background-color: #6D2323;
+    background-color: #3E1212;
     padding: 10px 20px;
-    color: #E5D0AC;
+    color: #B88F58;
     height: 60px; 
 }
 
@@ -66,9 +66,9 @@ header { /*styles for the header,*/
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #A31D1D;
+    background-color: #6D2323;
     padding: 0px;
-    color: #FEF9E1;
+    color: #F0E7D8;
     position: fixed;
     top: 78px; /*this has a top of 78 because this sets a space of 78 px above so it doesnt overlap the header*/
     width: 100%;
@@ -88,7 +88,7 @@ main { /*basic styles for the main*/
 
 h2 { /*basic styles for all h2*/
     font-size: 36px;
-    color: #6D2323;
+    color: #E5D0AC;
     margin: 0 0 20px;
     text-align: left; 
     font-weight: bold; 
@@ -107,7 +107,7 @@ h2 { /*basic styles for all h2*/
 
 .source { /*this just some basic css for the source link*/
     text-decoration: none;
-    color: #6D2323;
+    color: #E5D0AC;
     font-weight: bold;
     justify-content: center;
     font-size: 18px;
@@ -122,7 +122,7 @@ h2 { /*basic styles for all h2*/
 footer { /*basic styles for the footer*/
     text-align: center;
     padding: 20px;
-    background-color: #6D2323;
+    background-color: #3E1212;
     color: #E5D0AC;
     margin-top: 0px;
     
@@ -146,7 +146,7 @@ figcaption {
 }
 
 figcaption a { /*styles for the <a> inside the figcaption*/
-    color: #6D2323; 
+    color: #E5D0AC; 
     text-decoration: none; 
     font-weight: bold;
 }
@@ -157,7 +157,7 @@ figcaption a:hover { /*when u hover over the fig caption, it underlines the text
 
 
 form {
-    background-color: #FEF9E1; 
+    background-color: #1D1616; 
     padding: 20px;
     border-radius: 10px;
     max-width: 500px;
@@ -166,21 +166,21 @@ form {
 }
 
 fieldset {
-    border: 2px solid #6D2323;
+    border: 2px solid #E5D0AC;
     padding: 20px;
     border-radius: 10px;
 }
 
 legend {
     font-size: 24px;
-    color: #6D2323;
+    color: #E5D0AC;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 label {
     font-size: 16px;
-    color: #6D2323;
+    color: #E5D0AC;
     font-weight: bold;
     margin-bottom: 8px;
     display: block;
@@ -190,11 +190,11 @@ select {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #6D2323;
+    border: 2px solid #E5D0AC;
     border-radius: 5px;
     margin-bottom: 15px;
-    background-color: #FEF9E1;
-    color: #6D2323;
+    background-color: #1D1616;
+    color: #E5D0AC;
 }
 
 select:focus {
@@ -203,27 +203,71 @@ select:focus {
 }
 
 button {
-    color: #FEF9E1;
-    background-color: #6D2323;
+    color: #E5D0AC;
+    background-color: #1D1616;
+    
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    border: 2px solid #E5D0AC;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #A31D1D;
+    background-color: #3E1212;
 }
 
 button:focus {
-    outline: 3px solid #A31D1D;
+    outline: 3px solid #3E1212;
     border-radius: 5px;
 }
 
 iframe {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.container {
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mode-toggle {
+    width: 200px;
+    height: 100px;
+    border-radius: 200px;
+    background-color: #d2d2d2;
+    cursor:pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.mode-toggle:before {
+    position: absolute;
+    content: '';
+    background-color: grey;
+    width: 90px;
+    height: 90px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+input:checked + .mode-toggle {
+    background-color: #20096d;
+}
+
+input:checked + .mode-toggle::before {
+    transform: translate(100px);
+}
+.container input {
+    display: none;
 }
